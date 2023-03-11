@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content=
+        "width=device-width, initial-scale=1.0">
+	<title>Survey Page</title>
+	<style>
+		body{
+			background-image: url("bg.jpg");
+			background-repeat: no-repeat;
+			background-size: cover;
+			text-align: center;
+			font-family: comic-sans;
+		}
+		h1{
+			color: white;
+			font-size:40px;
+		}
+		form{
+			background-color: #c1e3e2;
+			max-width:500px;
+			margin: 50px auto;
+			padding: 30px 30px;
+			box-shadow: 5px 10px 3px black;
+			border-style: inset;
+			border-radius: 10px;
+		}
+		.form_element{
+			margin-bottom: 10px;
+			text-align: left;
+		}
+		.form_element label{
+			display:block;
+			margin-bottom: 10px;
+		}
+		.form_element input, .form_element select{
+			background-color: white;
+			width:95%;
+			display:block;
+			padding: 10px;
+		}
+		.form_element input[type="radio"], .form_element input[type="checkbox"]{
+			display: inline-block;
+			width: auto;
+		}
+		.form_element input[type="submit"]{
+			background-color: black;
+			color: white;
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+	<h1>Please fill out this survey form.</h1>
+	<form id="form" action="servey_recieve.php" method="POST">
+		<div class="form_element">
+			<label for="name">Name</label>
+			<input type="text" id="name" name="name" placeholder="Enter your name">
+		</div>
+		<div class="form_element">
+			<label for="email">Email Address</label>
+			<input type="text" id="email" name="email" placeholder="Enter your email address">
+		</div>
+		<div class="form_element">
+			<label for="age">Age</label>
+			<input type="text" id="age" name="age" placeholder="Enter your age">
+		</div>
+		<div class="form_element">
+			<label for="role">What defines you the best?</label>
+			<select id="role" name="role">
+				<option value="Student">Student</option>
+				<option value="Intern">Intern(Training)</option>
+				<option value="WorkingProfessional">Working Professional</option>
+				<option value="NEET">NEET</option>
+			</select>
+		</div>
+		<div class="form_element">	
+			<p>Which platform do you use the most?</p>
+			<label for="leetcode"><input type="radio" id="leetcode" name="favwebsite" value="LC">Leetcode</label>
+			<label for="gfg"><input type="radio" id="gfg" name="favwebsite" value="GFG">GFG</label>
+			<label for="hackerrank"><input type="radio" id="hackerrank" name="favwebsite" value="HR">HackerRank</label>
+			<!--<label for="other"><input type="radio" id="other"><input type="text" class="other" id="other" name="favwebsite" placeholder="Other(Please Specify)"></label>-->
+		</div>
+		<div class="form_element">
+			<p>Which languages are you most familier with?</p>
+			<label for="cpp"><input type="checkbox" id="cpp" name="lang" value="C++">C++</label>
+			<label for="java"><input type="checkbox" id="java" name="lang" value="Java">Java</label>
+			<label for="js"><input type="checkbox" id="js" name="lang" value="Javascript">Javascript</label>
+			<label for="python"><input type="checkbox" id="python" name="lang" value="Python">Python</label>
+		</div>
+		<div class="form_element">
+			<input type="submit" value="Submit">
+		</div>
+	</form>
+</body>
+</html>
